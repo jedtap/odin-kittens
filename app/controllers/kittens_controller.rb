@@ -2,10 +2,20 @@ class KittensController < ApplicationController
 
   def index
     @kittens = Kitten.all
+    
+    respond_to do |f|
+      f.html
+      f.json { render :json => @kittens }
+    end
   end
 
   def show
     @kitten = Kitten.find(params[:id])
+  
+    respond_to do |f|
+      f.html
+      f.json { render :json => @kitten }
+    end
   end
   
   def new
