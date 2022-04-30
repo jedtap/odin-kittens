@@ -1,0 +1,9 @@
+<%= render "flash" %>
+
+<h1> Revising Furry Docs </h1>
+
+<%= render "form" %>
+<br><br>
+<%= link_to "Cat Home", "/" %> <br><br>
+
+<%= link_to "Delete Kitty-record", kitten_path(@kitten), data: { turbo_method: :delete, turbo_confirm: "You sure?" } %>

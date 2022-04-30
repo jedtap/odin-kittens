@@ -1,0 +1,11 @@
+<%= render "flash" %>
+
+<h2>Meet <%= @kitten.name %>!</h2>
+
+<h3>Age: <%= @kitten.age %></h3>
+<h3>Cuteness: <%= @kitten.cuteness %></h3>
+<h3>Softness: <%= @kitten.softness %></h3>
+
+<%= link_to "Cat Home", "/" %> <br><br>
+<%= link_to "Edit Kitty Docs", edit_kitten_path %> <br><br>
+<%= link_to "Delete Kitty-record", kitten_path(@kitten), data: { turbo_method: :delete, turbo_confirm: "You sure?" } %>
